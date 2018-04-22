@@ -6,7 +6,8 @@ const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 
 // Connection URL
-const url = 'mongodb://localhost:27017';
+const url = '\n' +
+    'mongodb://prakashpandey0:123456@ds151259.mlab.com:51259/nodedb\n';
 
 // Database Name
 const dbName = 'test';
