@@ -1,0 +1,53 @@
+<html>
+<head>
+
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+
+</head>
+<body>
+    <% include partials/header.ejs%>
+    <div class="container">
+        <div class="row">
+            <div class="card text-center mx-auto mt-2 mb-3">
+
+                <p class="h2">Insert data</p>
+            <form method = "post" action="/form" class="form-group">
+                <label>Enter Your Name</label><br>
+                <input class="form-control" type="text" name="name"><br>
+
+                <label>Enter Your Last Name</label><br>
+                <input class="form-control" type="text" name="lname"><br><br>
+
+                <input type="submit" class="btn btn-outline-success" name="submit">
+            </form>
+
+            </div>
+        </div>
+        <div class="card text-center">
+            <div class="card-header">
+                <a href="/form/show"><button class="btn btn-outline-primary">Show data</button></a>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Student Name</h5>
+                <p class="card-text">
+                   <ul class="list-group">
+                        <%if(typeof items != 'undefined' && items){
+
+                        for(var i = 0;i<items.length;i++){
+                        %>
+                    <li class="list-group-item"><%=items[i].name + " " + items[i].lname%> <a href="/form/delete/<%=items[i]._id%>"><button class="btn btn-outline-danger">DELETE</button></a>
+                          </li>
+                        <%}}%>
+                    </ul>
+                </p>
+
+
+            </div>
+
+        </div>
+        <div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
