@@ -13,5 +13,9 @@
     "http-errors": "~1.6.2",
     "mongodb": "^3.0.7",
     "morgan": "~1.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prakashpandey0/node_crud"
   }
 }
